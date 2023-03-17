@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function HomePage() {
   return (
@@ -10,7 +10,7 @@ function HomePage() {
         Default
       </button> */}
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage
