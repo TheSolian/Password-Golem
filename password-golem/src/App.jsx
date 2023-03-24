@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import VaultPage from "./pages/VaultPage";
+import PasswordGeneratorPage from "./pages/PasswordGenerator";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="signin" element={<SignInPage />} />
           <Route path="signup" element={<SignUpPage />} />
           <Route path="vault" element={<VaultPage />} />
+          <Route path="generator" element={<PasswordGeneratorPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
