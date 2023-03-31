@@ -13,15 +13,21 @@
     "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@reduxjs/toolkit": "^1.9.3",
     "babel-plugin-macros": "^3.1.0",
     "firebase": "^9.17.1",
     "flowbite": "^1.6.3",
     "flowbite-react": "^0.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-github-login-button": "^1.0.1",
     "react-google-button": "^0.7.2",
+<<<<<<< Updated upstream
     "react-hot-toast": "^2.4.0",
+=======
+    "react-redux": "^8.0.5",
+>>>>>>> Stashed changes
     "react-router-dom": "^6.8.2"
   },
   "devDependencies": {
