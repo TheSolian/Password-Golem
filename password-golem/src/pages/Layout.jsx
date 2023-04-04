@@ -1,10 +1,10 @@
 import { Link, Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 
-function Layout() {
+function Layout({ username, setUsername }) {
   return (
     <div>
-      <Navbar />
+      <Navbar username={username} setUsername={setUsername} />
       <Outlet />
     </div>
   )

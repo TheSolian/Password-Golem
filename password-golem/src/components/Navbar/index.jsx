@@ -1,17 +1,10 @@
-import { onAuthStateChanged } from 'firebase/auth'
-import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { auth } from '../../firebase/config'
 
-function Navbar() {
+function Navbar({ username, setUsername }) {
   const navigate = useNavigate()
-  const [username, setUsername] = useState(null)
 
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      setUsername(user.displayName)
-    }
-  })
+  console.log(username)
 
   function handleSignOut() {
     auth.signOut()

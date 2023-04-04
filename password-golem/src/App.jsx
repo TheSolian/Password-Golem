@@ -1,3 +1,4 @@
+import { onAuthStateChanged } from 'firebase/auth'
 import React, { useState } from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
@@ -14,11 +15,20 @@ import VaultPage from './pages/VaultPage'
 function App() {
   const [username, setUsername] = useState(null)
 
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setUsername(user.displayName)
+    }
+  })
+
   return (
     <BrowserRouter>
       <Provider store={store}>
         <Routes>
-          <Route path='/' element={<Layout />}>
+          <Route
+            path='/'
+            element={<Layout username={username} setUsername={setUsername} />}
+          >
             <Route index element={<VaultPage />} />
 
             <Route path='generator' element={<GeneratorPage />} />
