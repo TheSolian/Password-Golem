@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { addDoc, collection, doc, setDoc } from 'firebase/firestore'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -17,13 +17,9 @@ function SignUpPage() {
       e.target.email.value,
       e.target.password.value
     ).then(async () => {
-      auth.currentUser.username = e.target.username.value
-
-      await setDoc(
-        doc(db, 'users', 'userid', {
-          username: e.target.username.value,
-        })
-      )
+      updateProfile(auth.currentUser, {
+        displayName: e.target.username.value,
+      })
       navigate('/')
     })
   }

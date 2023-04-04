@@ -4,10 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import Input from '../../components/Input'
 import OAuth from '../../components/OAuth'
 import { auth } from '../../firebase/config'
-import useAuth from '../../firebase/hooks/useAuth'
 
 function SignInPage() {
-  // const user = useAuth()
   const navigate = useNavigate()
 
   async function handleSubmit(e) {
